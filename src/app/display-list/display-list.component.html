@@ -1,0 +1,7 @@
+<mat-list *ngFor="let task of tasks | async; index as i">
+    <mat-list-item>
+        <span id={{i}}>{{ task }}</span> 
+        <button mat-button color='warn' (click)='deleteTask(i)'>delete</button>
+        <button mat-button color='primary' (click)='checkCompletion(i)'>complete</button>
+    </mat-list-item>
+</mat-list>
